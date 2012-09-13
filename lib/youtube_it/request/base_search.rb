@@ -5,11 +5,9 @@ class YouTubeIt
 
       private
 
-      def base_url
-        "http://gdata.youtube.com/feeds/api/"
-      end
 
- 
+    module FieldSearch
+
     end
   end
 end
