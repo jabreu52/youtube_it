@@ -49,11 +49,11 @@ class YouTubeIt
     # === Returns
     # YouTubeIt::Response::VideoSearch
     def videos_by(params, options={})
-      request_params = params.respond_to?(:to_hash) ? params : options
+=begin      request_params = params.respond_to?(:to_hash) ? params : options
       #request_params[:page] = integer_or_default(request_params[:page], 1)
 
       request_params[:dev_key] = @dev_key if @dev_key
-=begin
+
       unless request_params[:max_results]
         request_params[:max_results] = integer_or_default(request_params[:per_page], 25)
       end
@@ -61,7 +61,7 @@ class YouTubeIt
       unless request_params[:offset]
         request_params[:offset] = calculate_offset(request_params[:page], request_params[:max_results] )
       end
-=end
+
       if params.respond_to?(:to_hash) and not params[:user]
         request = YouTubeIt::Request::VideoSearch.new(request_params)
       elsif (params.respond_to?(:to_hash) && params[:user]) || (params == :favorites)
@@ -73,6 +73,7 @@ class YouTubeIt
       logger.debug "Submitting request [url=#{request.url}]." if @legacy_debug_flag
       parser = YouTubeIt::Parser::VideosFeedParser.new(request.url)
       parser.parse
+=end
     end
 
     # Retrieves a single YouTube video.
