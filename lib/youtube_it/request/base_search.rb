@@ -25,7 +25,7 @@ class YouTubeIt
 
     module FieldSearch
       def default_fields
-        "id,updated,openSearch:totalResults,openSearch:startIndex,openSearch:itemsPerPage"
+        "id,updated,openSearch:totalResults,openSearch:startIndex"
       end
 
       def fields_to_params(fields)

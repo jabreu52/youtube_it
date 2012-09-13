@@ -6,7 +6,7 @@ class YouTubeIt
       # From here: http://code.google.com/apis/youtube/reference.html#yt_format
       ONLY_EMBEDDABLE = 5
 
-      attr_reader :max_results                     # max_results
+      #attr_reader :max_results                     # max_results
       attr_reader :order_by                        # orderby, ([relevance], viewCount, published, rating)
       attr_reader :offset                          # start-index
       attr_reader :query                           # vq
@@ -32,7 +32,7 @@ class YouTubeIt
       def initialize(params={})
         # Initialize our various member data to avoid warnings and so we'll
         # automatically fall back to the youtube api defaults
-        @max_results, @order_by,
+        @order_by,
         @offset, @query,
         @response_format, @video_format,
         @safe_search, @author, @lang,

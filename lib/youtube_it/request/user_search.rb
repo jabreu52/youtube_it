@@ -2,12 +2,12 @@ class YouTubeIt
   module Request #:nodoc:
     class UserSearch < BaseSearch #:nodoc:
       include FieldSearch
-      attr_reader :max_results                     # max_results
+      #attr_reader :max_results                     # max_results
       attr_reader :order_by                        # orderby, ([relevance], viewCount, published, rating)
       attr_reader :offset                          # start-index
 
       def initialize(params, options={})
-        @max_results, @order_by, @offset = nil
+        @order_by, @offset = nil
         @url = base_url
         @dev_key = options[:dev_key] if options[:dev_key]
         if params == :favorites
@@ -34,7 +34,7 @@ class YouTubeIt
 
       def to_youtube_params
         {
-          'max-results' => @max_results,
+          #'max-results' => @max_results,
           'orderby' => @order_by,
           'start-index' => @offset,
           'v' => 2
