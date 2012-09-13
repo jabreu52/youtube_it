@@ -3,7 +3,7 @@ class YouTubeIt
     class BaseSearch #:nodoc:
       attr_reader :url
 
-      private
+    end
 
 
     module FieldSearch
