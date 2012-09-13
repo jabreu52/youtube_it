@@ -66,7 +66,7 @@ class YouTubeIt
 
       def to_youtube_params
         {
-          'max-results' => @max_results,
+          #'max-results' => @max_results,
           'orderby' => @order_by,
           'start-index' => @offset,
           'v' => 2,
