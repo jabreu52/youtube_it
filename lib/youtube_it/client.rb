@@ -176,7 +176,7 @@ class YouTubeIt
     end
 
     def playlist(playlist_id, order_by = :position)
-      client.playlist(playlist_id, order_by)
+      #client.playlist(playlist_id, order_by)
     end
 
     def playlists(user = nil)
